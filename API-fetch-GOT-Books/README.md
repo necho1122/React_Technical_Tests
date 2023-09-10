@@ -20,7 +20,7 @@ This project showcases how to fetch data from multiple APIs sequentially in a Re
 1. The app starts by making an initial API request to a predefined endpoint (in this case, a Game of Thrones API: 'https://www.anapioficeandfire.com/api/').
 2. Upon receiving the data, it extracts relevant information, such as another API URL.
 3. A second API request is made using the extracted URL.
-4. The data from the second request is displayed to the user.
+4. The data from the second request (GOT books list) is displayed to the user.
 
 ## 📝 Note
 This project is for educational purposes and demonstrates the concept of sequential API requests in React. You can replace the example APIs with your own data sources.
