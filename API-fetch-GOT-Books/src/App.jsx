@@ -14,12 +14,12 @@ function App() {
           .then(response => response.json())
           .then(dataBooks => {
             const bookNames = dataBooks.map(book => book.name);
-            setBooks(bookNames); // Almacena los nombres de los libros en el estado
+            setBooks(bookNames); // Stores the names of the books in the state
           })
           .catch(error => console.log(error));
       })
       .catch(error => console.log(error));
-  }, []); // El segundo argumento [] asegura que este efecto se ejecute solo una vez al montar el componente.
+  }, []); // The second argument [] ensures that this effect is executed only once when setting up the component.
 
   return (
     <div>
