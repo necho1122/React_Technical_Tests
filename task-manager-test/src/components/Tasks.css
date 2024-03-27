@@ -1,0 +1,21 @@
+.task
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.undone-task
+{
+    text-decoration: none;
+    color: #ccc;
+}
+
+.done-task
+{
+    text-decoration: line-through;
+    color: #3cad19;
+    font-weight: bold;
+}
