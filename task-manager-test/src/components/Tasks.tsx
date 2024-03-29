@@ -30,36 +30,54 @@ const Tasks = () => {
 	};
 
 	const handleCheck = (index: number) => {
-		dispatch(doneTask(index)); // Pasar el índice como argumento
+		dispatch(doneTask(index));
 	};
 
 	return (
-		<div>
-			<h1>Tasks</h1>
-			<div className="input-task">
-				<input type="text" id="new-task" onKeyDown={addTaskWithEnter} />
-				<button type="button" onClick={() => handleAddTask()}>
-					Add Task
-				</button>
-			</div>
-			<div className="task-container">
-				{tasks.map((task: { text: string; done: boolean }, index: number) => (
-					<div key={index} className="task">
-						<input
-							type="checkbox"
-							checked={task.done}
-							onChange={() => handleCheck(index)} // Pasar el índice a handleCheck
-						/>
-						<span className={task.done ? "done-task" : "undone-task"}>
-							{task.text}
-						</span>
-						<button type="button" onClick={() => handleDeleteTask(index)}>
-							Delete
+		<>
+			<div className="tasks-and-lateral">
+				<div className="lateral">
+					<button type="button">A</button>
+					<button type="button">B</button>
+					<button type="button">C</button>
+				</div>
+				<div className="tasks-container-input">
+					<h1>Tasks</h1>
+					<div className="input-task">
+						<input type="text" id="new-task" onKeyDown={addTaskWithEnter} />
+						<button type="button" onClick={() => handleAddTask()}>
+							Add Task
 						</button>
 					</div>
-				))}
+					<div className="task-container">
+						{tasks.map(
+							(task: { text: string; done: boolean }, index: number) => (
+								// biome-ignore lint/suspicious/noArrayIndexKey: Avoid using the index of an array as key property in an element. In this case the index is used as key because the tasks are not unique and the order is important.
+								<div key={index} className="task">
+									<span className={task.done ? "done-task" : "undone-task"}>
+										{task.text}
+									</span>
+									<div className="task-buttons">
+										<input
+											type="checkbox"
+											className="input-checkbox"
+											checked={task.done}
+											onChange={() => handleCheck(index)}
+										/>
+										<button
+											type="button"
+											onClick={() => handleDeleteTask(index)}
+										>
+											Delete
+										</button>
+									</div>
+								</div>
+							),
+						)}
+					</div>
+				</div>
 			</div>
-		</div>
+		</>
 	);
 };
 

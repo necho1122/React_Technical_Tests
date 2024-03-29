@@ -1,6 +1,37 @@
-#root {
+body
+{
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #B470EA;
+  min-height: 100vh;
+  color: #333;
+}
+
+#root
+{
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 20px;
   text-align: center;
+  background-color: #B470EA;
+}
+
+.tasks-container
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #B470EA;
+}
+
+input
+{
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
 }

@@ -4,7 +4,9 @@ import Tasks from "./components/Tasks";
 function App() {
 	return (
 		<>
-			<Tasks />
+			<div className="tasks-container">
+				<Tasks />
+			</div>
 		</>
 	);
 }

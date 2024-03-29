@@ -3,19 +3,84 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
+    padding: 0 10px;
+    background-color: #19798a;
+    min-width: 90%;
+    border-radius: 10px;
+    margin: 10px;
 }
 
 .undone-task
 {
     text-decoration: none;
-    color: #ccc;
+    color: #333333;
 }
 
 .done-task
 {
     text-decoration: line-through;
-    color: #3cad19;
+    color: #66b64e;
     font-weight: bold;
+}
+
+.tasks-and-lateral
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    background-color: #E06B6B;
+    width: 90%;
+    border-radius: 15px;
+    height: auto;
+    max-width: 840px;
+    min-height: 80vh;
+}
+
+button
+{
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333333;
+    color: #fff;
+    cursor: pointer;
+}
+
+.lateral
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #e06bcc;
+    border-radius: 15px;
+    min-height: 70vh;
+    margin: 10px;
+}
+
+.tasks-container-input
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    background-color: #6bcee0;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 580px;
+    min-height: 70vh;
+}
+
+.task-buttons
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    margin: 0;
 }
